@@ -1,0 +1,42 @@
+<!doctype html>
+
+<head>
+    <title>Pig Latin Translator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <h1>Pig Latin Translator!</h1>
+        </div>
+        <div class="row">
+            <form action="{% url 'translate' %}" method="get">
+                <div class="form-group row">
+                    <label for="translate" class="col-sm-4 col-form-label">Input Text</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" name="origText" placeholder="what would you like to translate?">
+                    </div>
+                </div>
+                
+                <br>
+
+                <input class="btn btn-primary" type="submit" value="Translate!">
+            </form>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <a href="{% url 'about' %}" class="btn btn-info">
+                About Page
+            </a>
+        </div>
+    </div>
+    
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
